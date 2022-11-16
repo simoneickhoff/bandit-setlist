@@ -1,0 +1,29 @@
+.project-overview-container {
+    width: 100%;
+    height: 80vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    padding: 3rem 0;
+}
+
+.project-list-container {
+    margin-top: 1rem;
+}
+
+.project-list-item {
+    justify-content: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin: 0.5rem 0;
+}
+
+.project-overview-label {
+    text-align: center;
+}
+
+.project-form {
+    margin-top: 2rem;
+}

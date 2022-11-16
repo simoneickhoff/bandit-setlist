@@ -1,0 +1,16 @@
+.setlist-page {
+    width: 100%;
+    min-height: 90vh;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+}
+
+.sidebar {
+    grid-column: span 1;
+    display: flex;
+    justify-content: center;
+}
+
+.setlist-creator {
+    grid-column: span 3;
+}

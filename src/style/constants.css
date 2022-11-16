@@ -1,0 +1,11 @@
+:root {
+    --primary: #3f888f;
+    --secondary: #555555;
+    --background: #ffffff;
+    --hover-background: rgba(220, 220, 220, 0.7);
+    --text-color: #222222;
+    --disabled: #888888;
+    --primary-darker: #265559;
+    --alert: #b30000;
+    --border-radius: 0.25rem;
+}

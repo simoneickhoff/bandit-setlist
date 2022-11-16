@@ -1,0 +1,35 @@
+button {
+    padding: 0.5rem;
+    border: 2px solid var(--primary);
+    color: 2px solid var(--text-color);
+    border-radius: var(--border-radius);
+    background-color: var(--background);
+    font-size: 1rem;
+    align-self: flex-end;
+    cursor: pointer;
+}
+
+button:disabled {
+    cursor: not-allowed;
+}
+
+button[type='submit'] {
+    color: white;
+    background-color: var(--primary);
+}
+
+button[type='submit']:active {
+    border: 2px solid var(--primary-darker);
+    background-color: var(--primary-darker);
+}
+
+button[type='submit']:disabled {
+    border: 2px solid var(--disabled);
+    background-color: var(--disabled);
+}
+
+button.delete-button {
+    background-color: var(--alert);
+    border-color: var(--alert);
+    color: white;
+}

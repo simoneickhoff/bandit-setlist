@@ -1,0 +1,34 @@
+.setlist-metadata-container {
+    border-bottom: 1px solid var(--primary);
+    padding-bottom: 1rem;
+}
+
+.setlist-title {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+.setlist-data-container {
+    display: flex;
+    flex-direction: row;
+}
+
+.setlist-data-container div {
+    margin-right: 1rem;
+}
+
+.setlist-input {
+    border: none;
+}
+
+.setlist-item-metadata svg {
+    margin-right: 0.25rem;
+}
+
+.setlist-item-metadata {
+    display: flex;
+}
+
+.setlist-item-metadata div {
+    margin-right: 1rem;
+}

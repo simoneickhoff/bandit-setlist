@@ -1,0 +1,18 @@
+.autocomplete-options {
+    position: absolute;
+    background-color: var(--background);
+    list-style: none;
+    border-radius: var(--border-radius);
+    margin: 0;
+    padding: 0;
+    width: 15rem;
+    border: 1px solid var(--disabled);
+}
+
+.autocomplete-options li {
+    padding: 0.5rem;
+}
+
+.autocomplete-options li.active {
+    background-color: var(--primary);
+}

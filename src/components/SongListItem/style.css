@@ -1,0 +1,38 @@
+.song-list-item {
+    min-height: 3rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.5rem 0.25rem;
+}
+
+/* .song-list-item:hover {
+    -webkit-box-shadow: 0px 10px 13px -7px rgba(150, 150, 150, 0.37),
+        5px 3px 20px 5px rgba(100, 100, 100, 0.07);
+    box-shadow: 0px 10px 13px -7px rgba(150, 150, 150, 0.37),
+        5px 3px 20px 5px rgba(100, 100, 100, 0.07);
+    border-radius: var(--border-radius);
+} */
+
+.song-list-item-artist {
+    font-size: 0.75rem;
+}
+
+.song-list-item-trailing {
+    margin-right: 0.25rem;
+    position: relative;
+}
+
+.song-context-menu {
+    position: absolute;
+    right: 0;
+}
+
+.song-context-menu > ul {
+    list-style: none;
+}
+
+.song-form-buttons {
+    display: flex;
+    justify-content: space-between;
+}

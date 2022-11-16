@@ -1,0 +1,10 @@
+.project-input {
+    font-size: 1.5rem;
+    text-align: center;
+}
+
+.project-form-submit {
+    display: flex;
+    justify-content: center;
+    margin: 1rem 0;
+}

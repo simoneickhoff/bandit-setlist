@@ -1,0 +1,13 @@
+.text-input {
+    padding: 0.5rem;
+    background-color: var(--background);
+    color: var(--text-color);
+    outline: 0;
+    border-width: 0 0 2px;
+    border-color: var(--disabled);
+}
+
+.text-input:hover,
+.text-input:focus {
+    border-color: var(--primary);
+}
