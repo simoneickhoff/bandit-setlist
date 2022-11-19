@@ -12,7 +12,7 @@ interface ISetlistMetaDataFormProps {
 const SetlistMetaDataForm: FC<ISetlistMetaDataFormProps> = ({ setlist }) => {
     const updateSetlist = async (updatedSetlist: Setlist) => {
         if (setlist?.id) {
-            const res = await db.setlist.update(setlist.id, updatedSetlist);
+            await db.setlist.update(setlist.id, updatedSetlist);
         }
     };
     return (
