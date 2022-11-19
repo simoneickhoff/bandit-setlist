@@ -32,9 +32,7 @@ const SetForm: FC<ISetFormProps> = ({ set, idProject }) => {
 
         return db.song
             .where({ id_project: idProject })
-            .filter((song) =>
-                song.title.toLowerCase().includes(songSearch.toLowerCase())
-            )
+            .filter((song) => song.title.toLowerCase().includes(songSearch.toLowerCase()))
             .limit(10)
             .toArray();
     }, [songSearch]);
@@ -45,17 +43,20 @@ const SetForm: FC<ISetFormProps> = ({ set, idProject }) => {
     };
 
     return (
-        <Card>
+        <div className='set-form-container'>
             <>
                 <h4>{set.title}</h4>
                 {set.content?.map((element, index) => {
                     if (Number.isInteger(element)) {
-                        const songInSetlist = songsInSetlist?.find(
-                            (song) => song.id === element
-                        );
+                        const songInSetlist = songsInSetlist?.find((song) => song.id === element);
 
                         if (songInSetlist) {
-                            return <div key={index}>{songInSetlist.title}</div>;
+                            return (
+                                <div key={index} className='set-song-item'>
+                                    {songInSetlist.number && songInSetlist.number + ' - '}
+                                    {songInSetlist.title}
+                                </div>
+                            );
                         }
                     }
                 })}
@@ -67,10 +68,10 @@ const SetForm: FC<ISetFormProps> = ({ set, idProject }) => {
                         }) ?? []
                     }
                     onSelectItem={(key: number) => addSongToSet(key)}
-                    onChange={setSongSearch}
+                    onChange={(value: string) => setSongSearch(value)}
                 />
             </>
-        </Card>
+        </div>
     );
 };
 

@@ -1,5 +1,6 @@
 import { FC, FormEvent, InputHTMLAttributes, useEffect, useState } from 'react';
 import TextInput from '../TextInput/TextInput';
+import './style.css';
 
 interface AutoCompleteOption {
     key: number;
@@ -12,9 +13,7 @@ interface IAutoCompleteProps {
     onSelectItem: (key: number) => void;
 }
 
-const AutoComplete: FC<
-    IAutoCompleteProps & InputHTMLAttributes<HTMLInputElement>
-> = ({ onChange, onSelectItem, options, ...inputProps }) => {
+const AutoComplete: FC<IAutoCompleteProps> = ({ onChange, onSelectItem, options }) => {
     const [searchTerm, setSearchTerm] = useState('');
     const [activeOptionKey, setActiveOptionKey] = useState<number>();
 
@@ -50,9 +49,7 @@ const AutoComplete: FC<
                 <ul className='autocomplete-options shadow'>
                     {options.map((option) => (
                         <li
-                            className={
-                                activeOptionKey === option.key ? 'active' : ''
-                            }
+                            className={activeOptionKey === option.key ? 'active' : ''}
                             key={option.key}
                             onClick={() => onSelectItem(option.key)}
                             onMouseEnter={() => setActiveOptionKey(option.key)}

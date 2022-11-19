@@ -39,21 +39,12 @@ const SetlistForm: FC<ISetlistFormProps> = ({ setlist }) => {
 
     return (
         <div className='setlist-form-container'>
-            <Button onClick={createSet}>Neues Set hinzufügen</Button>
-            {/* options for the autocomplete */}
-            <datalist id={`songs`}>
-                {autoCompleteSongs?.map((songOption) => (
-                    <option key={songOption.id} value={songOption.id}>
-                        {songOption.title}
-                    </option>
-                ))}
-            </datalist>
+            <Button className='new-set-button' onClick={createSet}>
+                Neues Set hinzufügen
+            </Button>
+
             {sets?.map((set) => (
-                <SetForm
-                    key={set.id}
-                    set={set}
-                    idProject={setlist.id_project}
-                />
+                <SetForm key={set.id} set={set} idProject={setlist.id_project} />
             ))}
         </div>
     );

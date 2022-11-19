@@ -14,10 +14,7 @@ const Card: FC<CardProps & PropsWithChildren> = ({
     children,
 }) => {
     return (
-        <div
-            className={`card ${active && 'active'} ${className}`}
-            onClick={onClick}
-        >
+        <div className={`card ${active ? 'active' : ''} ${className}`} onClick={onClick}>
             {children}
         </div>
     );
